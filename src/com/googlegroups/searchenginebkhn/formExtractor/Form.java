@@ -2,7 +2,7 @@ package com.googlegroups.searchenginebkhn.formExtractor;
 
 import java.util.LinkedList;
 
-import com.googlegroups.searchenginebkhn.queryTemplate.LabelValueSet;
+
 
 public class Form 
 {
