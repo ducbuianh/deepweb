@@ -11,11 +11,11 @@ import com.gargoylesoftware.htmlunit.html.DomNodeList;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-public class FormExtractor {
-	public DomNodeList<HtmlElement> extract(URL url)
+public class FormExtractor 
+{
+	public DomNodeList<HtmlElement> extract(WebClient wc, URL url)
 	{
 		DomNodeList<HtmlElement> node_list;
-		WebClient wc = new WebClient();
 		try{
 		HtmlPage page = (HtmlPage) wc.getPage(url);
 		node_list = page.getElementsByTagName("form");
