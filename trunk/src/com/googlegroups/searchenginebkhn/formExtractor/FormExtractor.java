@@ -17,7 +17,8 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import com.gargoylesoftware.htmlunit.html.HtmlSelect;
 
-public class FormExtractor {
+public class FormExtractor 
+{
 	public List<HtmlForm> getForm(WebClient wc, URL url)
 	{
 		List<HtmlForm> node_list;
