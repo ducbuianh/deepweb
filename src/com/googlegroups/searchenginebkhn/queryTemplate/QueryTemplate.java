@@ -34,8 +34,7 @@ public class QueryTemplate
 		int i = 0;
 		for (LabelValueSet lvs : lvsList)
 		{
-			queryTemplateContent = queryTemplateContent + lvs.getLabelName() + "=" 
-				+ "\"value" + (i++) + "\"";
+			queryTemplateContent = queryTemplateContent + lvs.getLabelName() + "=value" + (i++);
 		}
 		return queryTemplateContent;
 	}
@@ -67,8 +66,13 @@ public class QueryTemplate
 					resultList.add(query);
 				}
 		}
-		
+		for (int i = 0; i < resultList.size(); i++)
+		{
+			String s = queryTemplateHeader + "?" + "search-alias=stripbooks" + "&unfiltered=1"+ resultList.get(i);
+			resultList.set(i, s);
+		}
 		return resultList;
 	}
+	//http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-keywords=computer&field-author=&field-title=&field-isbn=&field-publisher=addison+wesley&node=&field-p_n_condition-type=&field-feature_browse-bin=&field-binding_browse-bin=&field-subject=&field-language=&field-dateop=&field-datemod=&field-dateyear=&sort=relevanceexprank&Adv-Srch-Books-Submit.x=52&Adv-Srch-Books-Submit.y=6
 	
 }

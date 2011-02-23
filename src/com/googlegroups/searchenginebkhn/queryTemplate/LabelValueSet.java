@@ -18,6 +18,8 @@ public class LabelValueSet
 	}
 	public void addValue(String labelValue)
 	{
+		// chuan hoa bo ki tu space
+		labelValue = labelValue.replace(' ', '+');
 		valueSets.add(labelValue);
 	}
 	public String getLabelName()
@@ -33,7 +35,7 @@ public class LabelValueSet
 		LinkedList<String> set = new LinkedList<String>();
 		for (String e : valueSets)
 		{
-			String member = labelName + "=" + "\"" + e + "\"";
+			String member = labelName + "=" + e;
 			set.add(member);
 		}
 		return set;
